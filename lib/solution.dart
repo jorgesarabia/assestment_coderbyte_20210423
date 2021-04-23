@@ -16,17 +16,15 @@ String letterCount(String str) {
 
 int _letras(String l) {
   final le = l.toLowerCase();
-  int numberOfLetters = 1;
-  String letter;
+  int numberOfLetters = -1;
   for (int count = 0; count < le.length; count++) {
     final n = le.split(le[count]).length - 1;
     if (n > numberOfLetters) {
       numberOfLetters = n;
-      letter = le[count];
     }
   }
 
-  if (letter != null) {
+  if (numberOfLetters > 1) {
     return numberOfLetters;
   }
 
